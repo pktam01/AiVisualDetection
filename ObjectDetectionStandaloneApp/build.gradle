@@ -1,0 +1,32 @@
+buildscript {
+	repositories {
+	   maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+bootJar {
+	baseName = 'gs-objectimage-files'
+	version =  '0.1.0'
+}
+
+repositories {
+   maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+	
+	compile group: 'org.tensorflow', name: 'tensorflow', version: '1.4.0'
+	compile group: 'org.tensorflow', name: 'proto', version: '1.4.0'
+	
+}
