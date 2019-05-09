@@ -1,6 +1,8 @@
 buildscript {
     repositories {
-       maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
+       maven {
+        url "https://jcenter.bintray.com"
+    }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
@@ -13,12 +15,14 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 bootJar {
-    baseName = 'gs-uploading-files'
+    baseName = 'ObjectDetectionJavaApp'
     version =  '0.1.0'
 }
 
 repositories {
-   maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
+    maven {
+        url "https://jcenter.bintray.com"
+    }
 }
 
 sourceCompatibility = 1.8

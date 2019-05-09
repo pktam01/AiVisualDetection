@@ -1,10 +1,12 @@
 buildscript {
-	repositories {
-	   maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
-	}
+    repositories {
+       maven {
+        url "https://jcenter.bintray.com"
+    }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+    }
 }
 
 apply plugin: 'java'
@@ -18,7 +20,9 @@ bootJar {
 }
 
 repositories {
-   maven { url 'https://pi-artifactory.lmig.com/artifactory/maven/' }
+     maven {
+        url "https://jcenter.bintray.com"
+    }
 }
 
 sourceCompatibility = 1.8
